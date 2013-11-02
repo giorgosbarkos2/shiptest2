@@ -1,0 +1,25 @@
+norte_sur_paginas_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: NorteSurPaginasBundle:Default:index }
+
+
+home:
+    pattern:  /
+    defaults: { _controller: NorteSurPaginasBundle:Default:home }
+
+    
+home:
+    pattern:  /home
+    defaults: { _controller: NorteSurPaginasBundle:Default:home }
+    
+    
+propiedades:
+   pattern:  /propiedades
+   defaults: { _controller: NorteSurPaginasBundle:Default:propiedades}
+   
+   
+      
+contacto:
+   pattern:  /contacto
+   defaults: { _controller: NorteSurPaginasBundle:Default:contacto}
+  

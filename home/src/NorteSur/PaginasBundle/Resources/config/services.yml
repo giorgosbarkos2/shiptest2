@@ -1,0 +1,7 @@
+parameters:
+#    norte_sur_paginas.example.class: NorteSur\PaginasBundle\Example
+
+services:
+#    norte_sur_paginas.example:
+#        class: %norte_sur_paginas.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

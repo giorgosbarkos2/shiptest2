@@ -1,0 +1,35 @@
+{# empty Twig template #}
+
+<script src="{{ asset('bundles/nortesuradmin/js/jquery.js') }}"></script>
+<script src="{{ asset('bundles/nortesuradmin/js/jquery-1.8.3.min.js') }}"></script>
+<script src="{{ asset('bundles/nortesuradmin/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bundles/nortesuradmin/js/jquery.scrollTo.min.js') }}"></script>
+<script src="{{ asset('bundles/nortesuradmin/js/jquery.scrollTo.min.js') }}"></script>
+
+<script src="{{ asset('bundles/nortesurcombobox/js/region.js') }}"></script>
+
+
+
+
+
+  <script>
+
+      //owl carousel
+
+      $(document).ready(function() {
+          $("#owl-demo").owlCarousel({
+              navigation : true,
+              slideSpeed : 300,
+              paginationSpeed : 400,
+              singleItem : true
+
+          });
+      });
+
+      //custom select box
+
+      $(function(){
+          $('select.styled').customSelect();
+      });
+
+  </script>

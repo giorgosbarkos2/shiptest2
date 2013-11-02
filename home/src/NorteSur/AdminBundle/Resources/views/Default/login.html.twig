@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="The click">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="img/favicon.html">
+
+    <title>Admin</title>
+
+         {% include "NorteSurAdminBundle:layer:css.html.twig" %}
+    
+</head>
+
+
+
+
+  <body class="login-body">
+
+    <div class="container">
+
+      <form class="form-signin" action="{{path('autentificarAdmin')}}"  id="formLogin"method="post">
+       <h2 class="form-signin-heading">Login / admin Norte Sur</h2>
+       <div class="login-wrap">
+           
+            <input type="text" class="form-control" name="usuario" id="nombre" placeholder="Usuario" autofocus>
+            <input type="password" class="form-control" name="password" id="contrasena" placeholder="Password">
+            
+            
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> 
+                <span class="pull-right"> <a href="#">Olvido su password ?  </a></span>
+            </label>
+            <button class="btn btn-lg btn-login btn-block"  id="butLogin"type="submit">Login</button>
+           
+            
+            <div class="login-social-link" id="respuesta">
+                
+                
+              
+               
+            </div>
+
+        </div>
+
+      </form>
+        
+        
+        
+        
+        <script src="{{ asset('bundles/nortesuradmin/js/jquery.js') }}"></script> 
+        
+        <script src="{{ asset('bundles/nortesuradmin/jsAp/login.js.js') }}"></script> 
+        
+        
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,7 @@
+parameters:
+#    norte_sur_comercio.example.class: NorteSur\ComercioBundle\Example
+
+services:
+#    norte_sur_comercio.example:
+#        class: %norte_sur_comercio.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

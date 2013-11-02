@@ -1,0 +1,68 @@
+<?php
+
+namespace NorteSur\ComercioBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Fotos
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Fotos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    
+      /** @ORM\Column(type="datetime") */
+    
+    private $fecha;
+    
+    
+    
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=100 , nullable=true)
+     */
+    
+    private $estado;
+    
+    
+    
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=100 , nullable=true)
+     */
+    
+    
+    
+    
+    private $url;
+    
+    
+    
+       
+    
+     /**
+     * @ORM\ManyToOne(targetEntity="NorteSur\ComercioBundle\Entity\Producto", inversedBy="fotos")
+     * @ORM\JoinColumn(name="producto_id", referencedColumnName="id")
+      * 
+     */
+      
+    
+    
+    private $producto;
+
+    
+}

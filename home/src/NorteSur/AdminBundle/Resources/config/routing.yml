@@ -1,0 +1,42 @@
+norte_sur_admin_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: NorteSurAdminBundle:Default:index }
+
+
+
+
+login:
+    pattern:  /admin/
+    defaults: { _controller: NorteSurAdminBundle:Default:login }
+
+
+
+admin:
+    pattern:  /admin/principal
+    defaults: { _controller: NorteSurAdminBundle:Default:admin }
+
+uploadProductosImg:
+  pattern:  /admin/uploadProductosImg
+  defaults: { _controller: NorteSurAdminBundle:Default:uploadProductosImg}
+  
+  
+guardarPropiedad:
+    pattern:  /admin/guardarPropiedad
+    defaults: { _controller: NorteSurAdminBundle:Default:guardarPropiedad }
+
+uploadProductoImg:
+    pattern:  /admin/uploadProductoImg
+    defaults: { _controller: NorteSurAdminBundle:Default:uploadProductoImg }
+   
+  
+  
+autentificarAdmin:
+   pattern:  /admin/autentificarAdmin
+   defaults: { _controller: NorteSurAdminBundle:Default:autentificarAdmin }
+   
+   
+AgregarPropiedades:
+   pattern:  /admin/AgregarPropiedades
+   defaults: { _controller: NorteSurAdminBundle:Default:vistaAgregarPropiedades }
+   
+   

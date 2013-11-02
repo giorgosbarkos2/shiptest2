@@ -1,0 +1,359 @@
+{# empty Twig template #}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Admin">
+    <meta name="keyword" content="Admin ">
+    <link rel="shortcut icon" href="img/favicon.html">
+
+    <title>Admin - Norte Sur </title>
+
+       {% include "NorteSurAdminBundle:layer:css.html.twig" %}
+    
+    
+
+  </head>
+
+  <body>
+
+  <section id="container" class="">
+      
+    
+      
+      <!--header start-->
+      <header class="header white-bg">
+            <div class="sidebar-toggle-box">
+                <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
+            </div>
+            <!--logo start-->
+            <a href="#" class="logo">Norte & Sur<span>  Admin / Agregar Propiedades </span></a>
+           
+            <div class="nav notify-row" id="top_menu">
+            
+             
+            </div>
+            <div class="top-nav ">
+               
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                   
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                          
+                            <span class="username">  {{usuario }}</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                      
+                            <li><a href="{{path('admin')}}"><i class="icon-key"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+                
+            </div>
+        </header>
+     
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- menu start-->
+              
+                {% include "NorteSurAdminBundle:layer:menu.html.twig" %}
+              <!-- menu end-->
+          </div>
+      </aside>
+   
+      <section id="main-content">
+          <section class="wrapper">
+         
+
+             
+             
+             <!--- contenido -->
+              <div class="row">
+                  <div class="col-lg-8">
+                    
+                      
+                
+                      
+                      
+                       <section class="panel">
+                          <header class="panel-heading">
+                              Agregar Propiedades
+                          </header>
+                          <div class="panel-body">
+                              
+                      
+                              <form id="formRegiones" action="{{path('comboRegion')}}" ></form>
+                              <form role="form" action="{{path('guardarPropiedad')}}" method="post">
+                                  
+                                  
+                                  
+                                  <div class="form-group">
+                                      <label for="exampleInputPassword1"> Descripción Corta </label>
+                                      <input type="text" class="form-control" id="descripcionCorta" name="descripcionCorta" placeholder="Descripción Corta">
+                                 
+                                  </div>
+                                  
+                                  
+                                  
+                                       <div class="form-group">
+                                      <label for="exampleInputPassword1"> Descripción Larga </label>
+                                      <br>
+                                  
+                                      
+                                       
+                                      
+                                      <textarea class="textarea2" id="DescripcionLarga" name="DescripcionLarga" title="" placeholde="Descripción Larga"  cols="80" rows="10" ></textarea>
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                  </div>
+                                  
+                                  
+                                  
+                                  <div class="form-group">
+                                      <label for="exampleInputPassword1"> Numero de piezas </label>
+                                      
+                                      <input type="text" class="form-control" id="numeroPiezas" name="numeroPiezas" placeholder="Numero de piezas">
+                                 
+                                  </div>
+                                  
+                                  
+                                  
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1"> Numero de Baños </label>
+                                      
+                                      <input type="text" class="form-control" id="numeroBanos" name="numeroBanos" placeholder=" Numero de Baños">
+                                 
+                                  </div>
+                                  
+                                  
+                                  
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">  Metros Construidos </label>
+                                      
+                                      <input type="text" class="form-control" id="metrosConstruidos" name="metrosConstruidos" placeholder="Metros Construidos">
+                                 
+                                  </div>
+                                  
+                                  
+                                  
+                                   <div class="form-group">
+                                      <label for="exampleInputPassword1">  Metros Terreno </label>
+                                      
+                                      <input type="text" class="form-control" id="MetrosTerreno" name="MetrosTerreno" placeholder="Metros Terreno ">
+                                 
+                                  </div>
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Tipo de propiedad</label>
+                                       <select class="form-control input-lg m-bot15" name="TipoPropiedad"  id="TipoPropiedad" style="width: 200px;height: 40px;font-size: 15px;">
+                                             
+                                              <option> Opción </option>
+                                              <option value="Casa">Casa</option>
+                                              <option value="Departamento">Departamento</option>
+                                              <option value="Terreno">Terreno</option>
+                                               <option value="Otro">Otro</option>
+                                               
+                                               
+                                          </select>
+                                  
+                                  </div>
+                                      
+                                      
+                                    <div class="form-group">
+                                        
+                                        
+                                      <label for="exampleInputEmail1">Estado</label>
+                                      
+                                      
+                                       <select class="form-control input-lg m-bot15" name="estadoPropiedad"  id="estadoPropiedad" style="width: 200px;height: 40px; font-size: 15px;">
+                                             
+                                              <option> Opción </option>
+                                              <option value="Usada">Usada</option>
+                                              <option value="Nueva">Nueva</option>
+                                          
+                                               
+                                          </select>
+                                      
+                                      
+                                    </div>
+                                  
+                                  
+                                  
+                                   <div class="form-group">
+                                      <label for=""> Dirección  </label>
+                                      <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Descripción Corta">
+                                 
+                                   
+                                   </div>
+                                  
+                                  
+                                  
+                                  <div class="form-group">
+                                      <label for=""> Región  </label>
+                                     
+                                      
+                                        
+ <select class="form-control input-lg m-bot15" name="Region"  id="Region" style="width: 200px;height: 40px; font-size: 15px;">
+   <option value="">Opción</option>
+
+ <option value="Región de Antofagasta">Región de Antofagasta </option>
+
+
+<option value="Región de Arica y Parinacota">Región de Arica y Parinacota </option>
+
+
+<option value="Región de Atacama">Región de Atacama </option>
+
+
+<option value="Región de Aysén del General Carlos Ibáñez del Campo">Región de Aysén del General Carlos Ibáñez del Campo </option>
+
+
+<option value="Región de Coquimbo">Región de Coquimbo </option>
+
+
+<option value="Región de la Araucanía">Región de la Araucanía </option>
+
+
+<option value="Región de Los Lagos" >Región de Los Lagos </option>
+
+
+<option value="Región de Los Lagos">Región de Los Ríos </option>
+
+
+<option value="Región de Magallanes">Región de Magallanes y la Antártica Chilena </option>
+
+
+<option value="Región de Tarapacá">Región de Tarapacá </option>
+
+
+<option value="Región de Valparaiso">Región de Valparaiso </option>
+
+
+<option value="Región del Bío-Bío">Región del Bío-Bío </option>
+
+
+
+<option value="Región del Libertador General Bernardo O Higgins">Región del Libertador General Bernardo O Higgins </option>
+
+
+<option value="Región del Maule">Región del Maule </option>
+
+
+<option value="Región Metropolitana">Región Metropolitana </option>
+
+
+
+
+ 
+              
+                                          
+                                               
+                                          </select>
+                                      
+                                      
+                                      
+                                  </div>
+                                  
+                                  
+                                  
+                                  
+                                       <div class="form-group">
+                                      <label for=""> Comuna </label>
+                                     <select class="form-control input-lg m-bot15" name="comuna"  id="comuna" style="width: 200px;height: 40px; font-size: 15px;">
+                                             
+                                              <option> Opción </option>
+                                              
+                                          
+                                               
+                                          </select>
+                                       
+                                       </div>
+                                  
+                                  
+                                  
+                                  
+                                     <div class="form-group">
+                                      <label for="exampleInputEmail1">Arriendo o Venta</label>
+                                       <select class="form-control input-lg m-bot15" name="ArriendoVenta"  id="ArriendoVenta" style="width: 200px;height: 40px;font-size: 15px;">
+                                             
+                                              <option> Opción </option>
+                                              <option value="Arriendo">Arriendo</option>
+                                              <option value="Venta">Venta</option>
+                                       
+                                               
+                                               
+                                          </select>
+                                  
+                                  </div>
+                                  
+                                  
+                                  
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Precio</label>
+                                      <input type="text" class="form-control" id="Precio" name="Precio" placeholder="Precio">
+                                 
+                                   
+                                  
+                                  </div>
+                                  
+                                      
+                                      
+                                      
+                                      
+                             
+                               
+                                 
+                                  <button type="submit" class="btn btn-info">Guardar / Agregar imagenes </button>
+                              </form>
+
+                          </div>
+                               
+                               
+                      
+                  </div>
+                      
+                      </div>
+                
+                
+                           
+
+                       <!--- contenido -->
+
+                      </section>
+                      
+                  </div>
+              </div>
+
+          </section>
+      </section>
+     
+
+
+
+    
+      
+       {% include "NorteSurAdminBundle:layer:jsAdmin.html.twig" %}
+    
+   
+
+  </body>
+</html>

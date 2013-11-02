@@ -1,0 +1,7 @@
+norte_sur_combobox_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: NorteSurComboboxBundle:Default:index }
+    
+comboRegion:
+  pattern:  /comboRegion
+  defaults: { _controller: NorteSurComboboxBundle:Default:comboRegion }

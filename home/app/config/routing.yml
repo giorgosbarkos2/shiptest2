@@ -1,0 +1,16 @@
+norte_sur_combobox:
+    resource: "@NorteSurComboboxBundle/Resources/config/routing.yml"
+    prefix:   /
+
+norte_sur_comercio:
+    resource: "@NorteSurComercioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+norte_sur_admin:
+    resource: "@NorteSurAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+norte_sur_paginas:
+    resource: "@NorteSurPaginasBundle/Resources/config/routing.yml"
+    prefix:   /
+
